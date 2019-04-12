@@ -7,11 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -36,8 +33,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Worldpopulation worldpopulation=List.get(position);
 
+        Worldpopulation worldpopulation=List.get(position);
         holder.countryNameTextView.setText( worldpopulation.getCountry());
         holder.countryRankTextView.setText(Integer.toString(worldpopulation.getRank()));
         holder.countryPopulationTextView.setText(worldpopulation.getPopulation());
